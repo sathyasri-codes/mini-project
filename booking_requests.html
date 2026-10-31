@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Requests</title>
+</head>
+<body>
+
+    <h2>Booking Requests</h2>
+
+    {% for booking in bookings %}
+
+        <h3>{{ booking.resource_name }}</h3>
+
+        <p>Student: {{ booking.student_name }}</p>
+        <p>Date: {{ booking.booking_date }}</p>
+        <p>Purpose: {{ booking.purpose }}</p>
+        <p>Status: {{ booking.status }}</p>
+        <form action="/update_booking_status/{{ loop.index0 }}/Approved" method="POST">
+    <button type="submit">Approve</button>
+</form>
+
+<form action="/update_booking_status/{{ loop.index0 }}/Rejected" method="POST">
+    <button type="submit">Reject</button>
+</form>
+
+        <hr>
+
+    {% else %}
+
+        <p>No booking requests available.</p>
+
+    {% endfor %}
+
+</body>
+</html>

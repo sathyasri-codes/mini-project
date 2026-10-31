@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book a Resource</title>
+</head>
+<body>
+
+    <h2>Request a Resource</h2>
+
+    <form action="/book_resource" method="POST">
+
+        <label>Student Name:</label>
+        <input type="text" name="student_name" required>
+        <br><br>
+
+        <label>Resource Name:</label>
+        <input type="text" name="resource_name" required>
+        <br><br>
+
+        <label>Booking Date:</label>
+        <input type="date" name="booking_date" required>
+        <br><br>
+
+        <label>Purpose:</label>
+        <textarea name="purpose" required></textarea>
+        <br><br>
+
+        <button type="submit">Submit Booking</button>
+
+    </form>
+
+</body>
+</html>

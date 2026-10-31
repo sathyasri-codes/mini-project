@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Resources</title>
+</head>
+<body>
+
+    <h2>Available Resources</h2>
+
+    {% for resource in resources %}
+        <h3>{{ resource.name }}</h3>
+        <p>Type: {{ resource.type }}</p>
+        <a href="/update_resource/{{ loop.index0 }}">Update</a><br><br>
+
+        <form action="/delete_resource/{{ loop.index0 }}" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+
+        <hr>
+    {% else %}
+        <p>No resources available.</p>
+    {% endfor %}
+
+</body>
+</html>

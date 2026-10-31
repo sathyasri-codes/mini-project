@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Resource</title>
+</head>
+<body>
+
+    <h2>Update Resource</h2>
+
+    <form method="POST">
+
+        <label>Resource Name:</label>
+        <input type="text" name="resource_name"
+               value="{{ resource.name }}" required>
+        <br><br>
+
+        <label>Resource Type:</label>
+        <input type="text" name="resource_type"
+               value="{{ resource.type }}" required>
+        <br><br>
+
+        <label>Description:</label>
+        <textarea name="description" required>{{ resource.description }}</textarea>
+        <br><br>
+
+        <button type="submit">Save Changes</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Status</title>
+</head>
+<body>
+
+    <h2>Check Booking Status</h2>
+
+    {% for booking in bookings %}
+
+        <h3>{{ booking.resource_name }}</h3>
+
+        <p>Student: {{ booking.student_name }}</p>
+        <p>Booking Date: {{ booking.booking_date }}</p>
+        <p>Status: {{ booking.status }}</p>
+
+        <hr>
+
+    {% else %}
+
+        <p>No booking records found.</p>
+
+    {% endfor %}
+
+</body>
+</html>
